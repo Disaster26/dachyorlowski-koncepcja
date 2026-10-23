@@ -1,0 +1,332 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Dachy Orłowski - więźby dachowe CNC, dachy, wiaty | Jedlina-Zdrój</title>
+<meta name="description" content="Więźby dachowe cięte na CNC Hundegger K2i, usługi dekarskie, wiaty, altany i domy szkieletowe. Jedlina-Zdrój, okolice Wałbrzycha i Wrocławia.">
+<meta name="theme-color" content="#F6F3EE">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..100,400..800&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="img/wiezba-dom-m.webp" media="(max-width: 760px)">
+<link rel="preload" as="image" href="img/wiezba-dom.webp" media="(min-width: 761px)">
+<link rel="stylesheet" href="style.css">
+<!-- Wizualizacja koncepcyjna nowej strony. Dane i zdjecia: dachy-orlowski.pl (archiwum) oraz profil firmy na Facebooku. -->
+</head>
+<body>
+
+<header class="top" id="top">
+  <div class="wrap top-in">
+    <a class="logo" href="#top" aria-label="Dachy Orłowski - strona główna"><img src="img/logo.png" alt="Dachy Orłowski" width="214" height="80"></a>
+    <nav class="menu" aria-label="Menu główne">
+      <a href="#kalkulator">Kalkulator dachu</a>
+      <a href="#wiezby">Więźby CNC</a>
+      <a href="#dekarskie">Usługi dekarskie</a>
+      <a href="#wiaty">Wiaty i domy</a>
+      <a href="#realizacje">Realizacje</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+    <a class="top-tel" href="tel:+48534252915" aria-label="Zadzwoń: 534 252 915">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.2 15.2 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></svg>
+      <span>534 252 915</span>
+    </a>
+    <button class="burger" aria-label="Otwórz menu" aria-expanded="false" aria-controls="panel"><span></span><span></span></button>
+  </div>
+  <div class="panel" id="panel" hidden>
+    <a href="#kalkulator">Kalkulator dachu</a>
+    <a href="#wiezby">Więźby CNC</a>
+    <a href="#dekarskie">Usługi dekarskie</a>
+    <a href="#wiaty">Wiaty, altany, domy</a>
+    <a href="#drewno">Drewno i materiały</a>
+    <a href="#realizacje">Realizacje</a>
+    <a href="#kontakt">Kontakt</a>
+    <p class="panel-tel"><a href="tel:+48534252915">534 252 915</a> <a href="tel:+48602452051">602 452 051</a></p>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+  <figure class="hero-foto">
+    <picture>
+      <source media="(max-width: 760px)" srcset="img/wiezba-dom-m.webp">
+      <img src="img/wiezba-dom.webp" alt="Drewniana więźba dachowa na budowanym domu szkieletowym" width="1600" height="1097" fetchpriority="high">
+    </picture>
+  </figure>
+  <div class="hero-in">
+    <h1>Więźby dachowe z&nbsp;własnego CNC, dachy i&nbsp;konstrukcje z&nbsp;drewna</h1>
+    <p class="lead">Tniemy więźby na obrabiarce Hundegger K2i w&nbsp;Jedlinie-Zdroju, montujemy je i&nbsp;kryjemy dachy. Robimy też wiaty, altany i&nbsp;domy szkieletowe. Pracujemy w&nbsp;rejonie Wałbrzycha i&nbsp;Wrocławia.</p>
+    <div class="hero-cta" id="heroCta">
+      <a class="btn btn-red" href="#kalkulator">Policz swój dach</a>
+      <a class="link" href="#realizacje">Zobacz realizacje</a>
+    </div>
+    <p class="hero-info">ul. Partyzantów 1A, Jedlina-Zdrój &middot; pn-pt 7:00-15:00</p>
+  </div>
+</section>
+
+<section class="kalk" id="kalkulator" aria-labelledby="k-h">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 id="k-h">Policz swój dach</h2>
+      <p>Wybierz kształt dachu, wpisz wymiary budynku i&nbsp;kąt. Rysunek zmienia się na bieżąco, a&nbsp;na końcu dostajesz gotową wiadomość do nas. Bez cen - wycenę robimy po obejrzeniu dachu albo projektu.</p>
+    </div>
+
+    <div class="k-grid">
+      <div class="k-vis">
+        <div class="k-stage">
+          <div class="k-view" role="group" aria-label="Widok rysunku">
+            <button type="button" class="on" data-view="krycie">Pokrycie</button>
+            <button type="button" data-view="wiezba">Więźba</button>
+          </div>
+          <svg id="dom" viewBox="0 0 800 520" role="img" aria-label="Rysunek budynku z wybranym dachem"></svg>
+          <p class="k-live" aria-live="polite"><b id="liveA">-</b> <span id="liveB"></span></p>
+        </div>
+        <dl class="k-wyn" id="wyniki"></dl>
+        <p class="k-uwaga">Wynik orientacyjny: liczony z&nbsp;wymiarów budynku, kąta i&nbsp;okapu. Dokładne ilości ustalamy z&nbsp;projektu albo po pomiarze na miejscu.</p>
+      </div>
+
+      <form class="k-form" id="kform" onsubmit="return false">
+        <fieldset>
+          <legend>Kształt dachu</legend>
+          <div class="ksz" id="ksztalty">
+            <label><input type="radio" name="typ" value="dwu" checked><span><svg viewBox="0 0 64 40"><path d="M6 36V20L32 5l26 15v16z"/><path class="r" d="M2 22 32 4l30 18"/></svg>Dwuspadowy</span></label>
+            <label><input type="radio" name="typ" value="cztero"><span><svg viewBox="0 0 64 40"><path d="M6 36V22h52v14z"/><path class="r" d="M2 23 20 8h24l18 15z"/></svg>Czterospadowy</span></label>
+            <label><input type="radio" name="typ" value="lukarny"><span><svg viewBox="0 0 64 40"><path d="M6 36V20L32 5l26 15v16z"/><path class="r" d="M2 22 32 4l30 18"/><path class="r" d="M21 22v-6l5-4 5 4v6"/></svg>Z lukarnami</span></label>
+            <label><input type="radio" name="typ" value="jedno"><span><svg viewBox="0 0 64 40"><path d="M8 36V21l48-9v24z"/><path class="r" d="M3 23l58-12"/></svg>Jednospadowy</span></label>
+            <label><input type="radio" name="typ" value="plaski"><span><svg viewBox="0 0 64 40"><path d="M8 36V18h48v18z"/><path class="r" d="M4 17h56"/></svg>Płaski</span></label>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Wymiary budynku <small>(obrys ścian, bez okapu)</small></legend>
+          <div class="wym">
+            <label>Długość<span class="num"><input type="number" id="dl" inputmode="decimal" min="3" max="40" step="0.1" value="12"><i>m</i></span></label>
+            <label>Szerokość<span class="num"><input type="number" id="sz" inputmode="decimal" min="2.5" max="20" step="0.1" value="9"><i>m</i></span></label>
+          </div>
+          <div class="chips" id="presety" aria-label="Typowe wymiary">
+            <button type="button" data-p="12,9,3">Dom 12 × 9</button>
+            <button type="button" data-p="10,8,3">Mały dom 10 × 8</button>
+            <button type="button" data-p="6,6,2.6">Garaż 6 × 6</button>
+            <button type="button" data-p="5,4,2.4">Wiata 5 × 4</button>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Kąt nachylenia <output id="katOut">40°</output></legend>
+          <div class="kat">
+            <input type="range" id="kat" min="2" max="55" step="1" value="40" aria-label="Kąt nachylenia w stopniach">
+            <button type="button" class="chip" id="nieWiem" aria-pressed="false">Nie wiem</button>
+          </div>
+          <p class="hint" id="katHint">Typowo 35-45° dla domu z&nbsp;poddaszem.</p>
+        </fieldset>
+
+        <fieldset>
+          <legend>Okap <output id="okapOut">0,6 m</output></legend>
+          <input type="range" id="okap" min="0" max="1.2" step="0.05" value="0.6" aria-label="Wysunięcie okapu w metrach">
+        </fieldset>
+
+        <fieldset id="fsLuk" hidden>
+          <legend>Lukarny</legend>
+          <div class="seg" id="lukN">
+            <button type="button" data-n="1">1</button><button type="button" data-n="2" class="on">2</button><button type="button" data-n="3">3</button>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Pokrycie</legend>
+          <div class="mat" id="materialy">
+            <label><input type="radio" name="mat" value="blacho"><span><i style="--c:#3b4046"></i>Blachodachówka</span></label>
+            <label><input type="radio" name="mat" value="rabek"><span><i style="--c:#30363c" class="rb"></i>Blacha na rąbek</span></label>
+            <label><input type="radio" name="mat" value="ceram" checked><span><i style="--c:#a6482d"></i>Dachówka ceramiczna</span></label>
+            <label><input type="radio" name="mat" value="beton"><span><i style="--c:#5a514b"></i>Dachówka betonowa</span></label>
+            <label><input type="radio" name="mat" value="papa"><span><i style="--c:#2b2e31"></i>Papa / gont</span></label>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Co trzeba zrobić</legend>
+          <div class="zakres" id="zakres">
+            <label><input type="checkbox" value="nowa więźba cięta na CNC" checked><span>Nowa więźba z&nbsp;CNC</span></label>
+            <label><input type="checkbox" value="montaż więźby" checked><span>Montaż więźby</span></label>
+            <label><input type="checkbox" value="krycie dachu" checked><span>Krycie dachu</span></label>
+            <label><input type="checkbox" value="wymiana starego pokrycia"><span>Wymiana starego pokrycia</span></label>
+            <label><input type="checkbox" value="naprawa, przecieki"><span>Naprawa, przecieki</span></label>
+            <label><input type="checkbox" value="rynny" checked><span>Rynny</span></label>
+            <label><input type="checkbox" value="okna dachowe" id="zOkna"><span>Okna dachowe</span></label>
+            <label><input type="checkbox" value="ocieplenie dachu"><span>Ocieplenie</span></label>
+          </div>
+          <div class="okna" id="oknaBox" hidden>
+            <span>Ile okien dachowych?</span>
+            <div class="step"><button type="button" id="oMinus" aria-label="Mniej okien">-</button><output id="oN">2</output><button type="button" id="oPlus" aria-label="Więcej okien">+</button></div>
+          </div>
+        </fieldset>
+
+        <fieldset class="wyslij">
+          <legend>Wyślij do nas</legend>
+          <label class="miejsce">Miejscowość budowy <small>(opcjonalnie)</small><input type="text" id="miejsce" placeholder="np. Świebodzice" autocomplete="address-level2"></label>
+          <dl class="k-wyn k-wyn-m" id="wynikiM"></dl>
+          <pre class="podsum" id="podsum"></pre>
+          <div class="send">
+            <a class="btn btn-red" id="bTel" href="tel:+48534252915">Zadzwoń</a>
+            <a class="btn btn-line" id="bSms" href="#">SMS z&nbsp;tym opisem</a>
+            <a class="btn btn-line" id="bMail" href="#">E-mail z&nbsp;tym opisem</a>
+          </div>
+          <button type="button" class="copy" id="bCopy">Skopiuj opis</button>
+        </fieldset>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section class="oferta" aria-label="Co robimy">
+  <div class="wrap">
+    <article class="row" id="wiezby">
+      <figure class="ph ph-duo">
+        <img src="img/zlacze.webp" alt="Złącze ciesielskie czop i gniazdo wycięte na CNC" loading="lazy" width="1600" height="1065">
+        <img class="sm" src="img/cnc-ciecie.webp" alt="Obróbka belki w obrabiarce CNC" loading="lazy" width="1200" height="1600">
+      </figure>
+      <div class="txt">
+        <h2>Więźby dachowe cięte na CNC</h2>
+        <p>Elementy więźby przygotowujemy na centrum obróbczym Hundegger K2i: docinamy na wymiar, wiercimy, wycinamy czopy, gniazda i&nbsp;zakończenia krokwi. Na budowę przyjeżdża komplet, który pasuje do projektu.</p>
+        <ul class="lista">
+          <li>Złącza ciesielskie tradycyjne: czop i&nbsp;gniazdo, jaskółczy ogon, wrąb, nakładka, zakładka</li>
+          <li>Albo montaż na okuciach ciesielskich, jeśli tak przewiduje projekt</li>
+          <li>Kratownice i&nbsp;wiązary kratowo-ramowe</li>
+          <li>Ozdobne końcówki krokwi, profile wypukłe i&nbsp;wklęsłe</li>
+          <li>Montaż więźby przez naszą ekipę albo sama dostawa elementów</li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="row rev" id="dekarskie">
+      <figure class="ph">
+        <img src="img/ekipa.webp" alt="Ekipa Dachy Orłowski przy montażu więźby" loading="lazy" width="1600" height="1200">
+      </figure>
+      <div class="txt">
+        <h2>Usługi dekarskie</h2>
+        <p>Dla domów jednorodzinnych, firm i&nbsp;zarządców nieruchomości. Bierzemy dach od więźby po ostatnią obróbkę, ale przyjeżdżamy też do pojedynczych napraw.</p>
+        <ul class="lista">
+          <li>Budowa i&nbsp;remont dachów, krycie dachów</li>
+          <li>Naprawy i&nbsp;usuwanie przecieków</li>
+          <li>Orynnowanie</li>
+          <li>Okna dachowe VELUX i&nbsp;wentylacja dachu</li>
+          <li>Ocieplenie dachu</li>
+          <li>Odśnieżanie i&nbsp;czyszczenie dachów</li>
+        </ul>
+        <a class="link" href="#kalkulator">Policz powierzchnię swojego dachu</a>
+      </div>
+    </article>
+
+    <article class="row" id="wiaty">
+      <figure class="ph ph-duo">
+        <img src="img/altana.webp" alt="Drewniana altana z dachem dwuspadowym przy basenie" loading="lazy" width="1600" height="739">
+        <img class="sm" src="img/dom-szkieletowy.webp" alt="Konstrukcja domu szkieletowego w budowie" loading="lazy" width="1200" height="1600">
+      </figure>
+      <div class="txt">
+        <h2>Wiaty, altany i&nbsp;domy szkieletowe</h2>
+        <p>Projektujemy i&nbsp;prefabrykujemy wiaty, garaże, altany, zadaszenia tarasów i&nbsp;pergole z&nbsp;suszonego drewna C24. Wystarczy pomysł albo szkic - resztę przygotujemy, od projektu po montaż.</p>
+        <ul class="lista">
+          <li>Dostawa elementów z&nbsp;rysunkami montażowymi, do samodzielnego montażu albo z&nbsp;naszą ekipą</li>
+          <li>Domy szkieletowe: ściany, stropy i&nbsp;dach jako gotowe elementy</li>
+          <li>Domy ryglowe i&nbsp;z&nbsp;bala prostokątnego</li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="row rev" id="drewno">
+      <figure class="ph">
+        <img src="img/elementy-numerowane.webp" alt="Przygotowane elementy z drewna konstrukcyjnego w hali" loading="lazy" width="1200" height="1600">
+      </figure>
+      <div class="txt">
+        <h2>Drewno i&nbsp;materiały na dach</h2>
+        <p>Na miejscu w&nbsp;Jedlinie-Zdroju sprzedajemy drewno konstrukcyjne i&nbsp;wszystko, czego potrzeba do postawienia więźby. Pomożemy dobrać przekroje i&nbsp;łączniki.</p>
+        <ul class="lista">
+          <li>Drewno konstrukcyjne KVH C24 i&nbsp;klejone BSH, tarcica</li>
+          <li>Łączniki i&nbsp;wkręty ciesielskie Rothoblaas i&nbsp;Holz Technic</li>
+          <li>Okna dachowe VELUX, membrany Dörken</li>
+          <li>Systemy Steico, styropian Swisspor</li>
+          <li>Brykiet drzewny</li>
+        </ul>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="real" id="realizacje" aria-labelledby="r-h">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 id="r-h">Realizacje</h2>
+      <p>Zdjęcia z&nbsp;naszych budów i&nbsp;z&nbsp;hali w&nbsp;Jedlinie-Zdroju.</p>
+    </div>
+  </div>
+  <div class="gal" id="gal">
+    <figure class="g1"><img src="img/krokwie-gory.webp" alt="Więźba dachowa w trakcie montażu, w tle góry" loading="lazy" width="1600" height="1200"><figcaption>Więźba w&nbsp;trakcie montażu</figcaption></figure>
+    <figure class="g2"><img src="img/wiata-basen.webp" alt="Wiata nad strefą basenu" loading="lazy" width="1600" height="739"><figcaption>Wiata przy basenie</figcaption></figure>
+    <figure class="g3"><img src="img/dom-las.webp" alt="Dom z gotową więźbą czterospadową" loading="lazy" width="1600" height="1200"><figcaption>Więźba czterospadowa</figcaption></figure>
+    <figure class="g4"><img src="img/wiazar-hala.webp" alt="Wiązary dachowe przygotowane w hali" loading="lazy" width="1600" height="1200"><figcaption>Wiązary przed wysyłką</figcaption></figure>
+    <figure class="g5"><img src="img/zadaszenie.webp" alt="Zadaszenie tarasu przy domu" loading="lazy" width="1131" height="848"><figcaption>Zadaszenie tarasu</figcaption></figure>
+    <figure class="g6"><img src="img/krokwie-gory-2.webp" alt="Krokwie i jętki więźby z bliska" loading="lazy" width="1600" height="1200"><figcaption>Krokwie i&nbsp;jętki</figcaption></figure>
+    <figure class="g7"><img src="img/dom-z-bala.webp" alt="Dom z bala z dachem dwuspadowym" loading="lazy" width="750" height="1000"><figcaption>Dom z&nbsp;bala</figcaption></figure>
+    <figure class="g8"><img src="img/wiata-dom.webp" alt="Konstrukcja wiaty przy budynku" loading="lazy" width="1600" height="1200"><figcaption>Wiata przy budynku</figcaption></figure>
+  </div>
+</section>
+
+<section class="proces" aria-labelledby="p-h">
+  <div class="wrap proces-in">
+    <div>
+      <h2 id="p-h">Jak to wygląda</h2>
+      <p>Najszybciej zadzwonić albo wysłać opis z&nbsp;kalkulatora. Jeśli jest projekt budowlany, prześlij go mailem - z&nbsp;niego przygotujemy elementy więźby.</p>
+    </div>
+    <ol class="kroki">
+      <li><b>Rozmowa.</b> Mówisz, co jest do zrobienia: nowy dach, wymiana pokrycia, naprawa, wiata.</li>
+      <li><b>Oględziny albo projekt.</b> Przyjeżdżamy zmierzyć dach lub pracujemy na Twoim projekcie.</li>
+      <li><b>Wycena i&nbsp;termin.</b> Dostajesz zakres prac, materiały i&nbsp;termin rozpoczęcia.</li>
+      <li><b>Przygotowanie.</b> Elementy więźby powstają na CNC w&nbsp;naszej hali.</li>
+      <li><b>Montaż i&nbsp;krycie.</b> Stawiamy więźbę, kryjemy dach, zakładamy rynny i&nbsp;okna.</li>
+    </ol>
+  </div>
+</section>
+
+<section class="kontakt" id="kontakt" aria-labelledby="c-h">
+  <div class="wrap kontakt-in">
+    <div class="k-dane">
+      <h2 id="c-h">Kontakt</h2>
+      <p class="k-firma">Dachy Orłowski Rafał</p>
+      <dl>
+        <dt>Telefon</dt><dd><a href="tel:+48534252915">534 252 915</a><br><a href="tel:+48602452051">602 452 051</a></dd>
+        <dt>E-mail</dt><dd><a href="mailto:biuro@dachy-orlowski.pl">biuro@dachy-orlowski.pl</a></dd>
+        <dt>Adres</dt><dd>ul. Partyzantów 1A<br>58-330 Jedlina-Zdrój</dd>
+        <dt>Godziny</dt><dd>poniedziałek - piątek, 7:00-15:00</dd>
+        <dt>Obszar</dt><dd>okolice Wałbrzycha i&nbsp;Wrocławia</dd>
+      </dl>
+      <div class="k-btn">
+        <a class="btn btn-red" href="tel:+48534252915">Zadzwoń</a>
+        <a class="btn btn-line" href="https://maps.app.goo.gl/EhwvBNwuCPp2BQJa9" target="_blank" rel="noopener">Dojazd</a>
+        <a class="btn btn-line" href="https://www.facebook.com/profile.php?id=100063544723650" target="_blank" rel="noopener">Facebook</a>
+      </div>
+    </div>
+    <div class="mapa">
+      <iframe title="Mapa: Dachy Orłowski, ul. Partyzantów 1A, Jedlina-Zdrój" loading="lazy" src="https://www.openstreetmap.org/export/embed.html?bbox=16.3335%2C50.7085%2C16.3655%2C50.7237&amp;layer=mapnik&amp;marker=50.71611%2C16.34956"></iframe>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="stopka">
+  <div class="wrap stopka-in">
+    <p>Dachy Orłowski Rafał &middot; ul. Partyzantów 1A, 58-330 Jedlina-Zdrój &middot; NIP 885-119-67-05</p>
+    <p class="muted">Wizualizacja nowej strony. Zdjęcia pochodzą z&nbsp;profilu firmy.</p>
+  </div>
+</footer>
+
+<div class="mob" id="mob">
+  <a class="btn btn-line" href="tel:+48534252915">Zadzwoń</a>
+  <a class="btn btn-red" href="#kalkulator">Policz dach</a>
+</div>
+
+<dialog class="lb" id="lb"><img alt=""><button type="button" aria-label="Zamknij">×</button></dialog>
+
+<script src="app.js"></script>
+</body>
+</html>
