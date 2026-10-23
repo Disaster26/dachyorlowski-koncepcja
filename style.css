@@ -214,7 +214,8 @@ input[type=range]::-moz-range-thumb{width:20px;height:20px;border-radius:50%;bac
 .k-dane dd a{text-decoration:none}
 .k-dane dd a:hover{color:var(--red)}
 .k-btn{display:flex;gap:10px;flex-wrap:wrap;margin-top:28px}
-.mapa{min-height:380px;border-radius:6px;overflow:hidden;border:1px solid var(--line)}
+.mapa{margin:0;min-height:380px;border-radius:6px;overflow:hidden;position:relative}
+.mapa img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 60%}
 .mapa iframe{width:100%;height:100%;min-height:380px;border:0;display:block;filter:saturate(.75)}
 
 .stopka{padding:30px 0 40px;font-size:14.5px;color:var(--ink2)}
@@ -320,7 +321,7 @@ input[type=range]::-moz-range-thumb{width:20px;height:20px;border-radius:50%;bac
   .kontakt{padding:56px 0 40px}
   .kontakt-in{grid-template-columns:minmax(0,1fr);gap:28px}
   .k-dane dl{grid-template-columns:92px minmax(0,1fr)}
-  .mapa,.mapa iframe{min-height:300px}
+  .mapa{min-height:0;aspect-ratio:4/3}
   .stopka{padding-bottom:96px}
 
   .mob{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.3fr);gap:8px;position:fixed;left:0;right:0;bottom:0;z-index:60;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:rgba(255,255,255,.96);border-top:1px solid var(--line);transform:translateY(110%);transition:transform .25s ease}
